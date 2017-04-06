@@ -1,6 +1,7 @@
 ;;----------------------------------------UI-------------------------------
 (setq initial-frame-alist (quote ((fullscreen . maximized))));;启动最大化
 (tool-bar-mode -1);;消除工具栏
+(menu-bar-mode -1);;消除菜单
 (scroll-bar-mode -1);;消除滚动轴
 (setq inhibit-splash-screen t);;关闭启动画面
 (setq-default cursor-type 'bar);;更改光标样式
