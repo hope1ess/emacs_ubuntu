@@ -30,10 +30,12 @@
 
 
 (global-set-key "\C-s" 'swiper)
-(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(global-set-key (kbd "C-x C-r") 'helm-recentf)
 (global-set-key (kbd "<f8>") 'ivy-resume)
-(global-set-key (kbd "M-x") 'counsel-M-x)
-(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-h f") 'counsel-describe-function)
 (global-set-key (kbd "C-h v") 'counsel-describe-variable)
 
@@ -44,7 +46,7 @@
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-item 10);;最多储存10个文件
-(global-set-key (kbd "C-x C-r") 'recentf-open-files)
+(global-set-key (kbd "C-x C-r") 'helm-recentf)
 ;;recentf设置，绑定快捷键c-x c-r
 
 (global-set-key (kbd "M-s e") 'iedit-mode);;iedit快捷键
