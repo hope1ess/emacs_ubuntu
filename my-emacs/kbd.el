@@ -41,7 +41,7 @@
 (global-set-key (kbd "C-h v") 'counsel-describe-variable)
 
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
-
+(global-set-key (kbd "C-c p") 'compile)
 ;;----------------------------------------------------------
 
 (require 'recentf)
