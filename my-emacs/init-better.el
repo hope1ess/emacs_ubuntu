@@ -1,5 +1,5 @@
 ;;----------------------------------------UI-------------------------------
-(setq initial-frame-alist (quote ((fullscreen . maximized))));;启动最大化
+;;(setq initial-frame-alist (quote ((fullscreen . maximized))));;启动最大化
 (tool-bar-mode -1);;消除工具栏
 (menu-bar-mode -1);;消除菜单
 (scroll-bar-mode -1);;消除滚动轴

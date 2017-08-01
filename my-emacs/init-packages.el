@@ -86,6 +86,7 @@
       (append
        '(("\\.js\\'" . js2-mode))
        '(("\\.html\\'" . web-mode))
+       '(("\\.h\\'" . c++-mode))
        auto-mode-alist))
 
 (defun remove-dos-eol ()
