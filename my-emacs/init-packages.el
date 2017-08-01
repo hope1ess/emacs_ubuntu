@@ -1,8 +1,8 @@
 
 (when (>= emacs-major-version 24)
-    (require 'package)
-    (package-initialize)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t))
+  (require 'package)
+  (package-initialize)
+  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t))
 
 ;; cl - Common Lisp Extension
 (require 'cl)
@@ -30,22 +30,22 @@
 		      js2-mode
 		      web-mode
 		      ycmd ;;ycmd补全
-
-	       ) "Default packages")
+		      spacemacs-theme
+		      ) "Default packages")
 
 (setq package-selected-packages my/packages)
 
 (defun my/packages-installed-p ()
-    (loop for pkg in my/packages
-	  when (not (package-installed-p pkg)) do (return nil)
-	  finally (return t)))
+  (loop for pkg in my/packages
+	when (not (package-installed-p pkg)) do (return nil)
+	finally (return t)))
 
 (unless (my/packages-installed-p)
-    (message "%s" "Refreshing package database...")
-    (package-refresh-contents)
-    (dolist (pkg my/packages)
-      (when (not (package-installed-p pkg))
-	(package-install pkg))))
+  (message "%s" "Refreshing package database...")
+  (package-refresh-contents)
+  (dolist (pkg my/packages)
+    (when (not (package-installed-p pkg))
+      (package-install pkg))))
 
 ;; Find Executable Path on OS X
 (when (memq window-system '(mac ns))
@@ -64,7 +64,8 @@
 ;;(global-company-mode 1);;开启全局company补全
 (add-hook 'emacs-lisp-mode-hook 'company-mode)
 (add-hook 'shell-mode-hook 'company-mode)
-(load-theme 'monokai t);;自启monokai
+;;(load-theme 'monokai t);;自启monokai
+(load-theme 'spacemacs-dark t)
 (require 'hungry-delete)(global-hungry-delete-mode);;hungry安装包
 
 
@@ -153,7 +154,7 @@
 ;;选中区域设置
 
 (add-to-list 'package-archives
-              '("melpa" . "https://melpa.org/packages/") t)
+	     '("melpa" . "https://melpa.org/packages/") t)
 
 
 
