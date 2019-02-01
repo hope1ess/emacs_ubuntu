@@ -1,4 +1,3 @@
-
 (when (>= emacs-major-version 24)
     (require 'package)
     (package-initialize)
@@ -30,7 +29,9 @@
 		      js2-mode
 		      web-mode
 		      ycmd ;;ycmd补全
-
+		      spacemacs-theme
+		      ;;c++-IDE
+		      
 	       ) "Default packages")
 
 (setq package-selected-packages my/packages)
@@ -64,7 +65,8 @@
 ;;(global-company-mode 1);;开启全局company补全
 (add-hook 'emacs-lisp-mode-hook 'company-mode)
 (add-hook 'shell-mode-hook 'company-mode)
-(load-theme 'monokai t);;自启monokai
+;;(load-theme 'monokai t);;自启monokai
+(load-theme 'spacemacs-dark t)
 (require 'hungry-delete)(global-hungry-delete-mode);;hungry安装包
 
 
